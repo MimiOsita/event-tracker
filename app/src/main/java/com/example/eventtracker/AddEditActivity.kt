@@ -13,6 +13,8 @@ class AddEditActivity : AppCompatActivity() {
 
     private lateinit var titleInput: EditText
     private lateinit var descriptionInput: EditText
+    private lateinit var dateInput: EditText
+    private lateinit var timeInput: EditText
     private lateinit var xInput: EditText
     private lateinit var yInput: EditText
 
@@ -25,6 +27,8 @@ class AddEditActivity : AppCompatActivity() {
 
         titleInput = findViewById(R.id.titleInput)
         descriptionInput = findViewById(R.id.descriptionInput)
+        dateInput = findViewById(R.id.dateInput)
+        timeInput = findViewById(R.id.timeInput)
         xInput = findViewById(R.id.xInput)
         yInput = findViewById(R.id.yInput)
 
@@ -63,6 +67,8 @@ class AddEditActivity : AppCompatActivity() {
 
         titleInput.setText(event.title)
         descriptionInput.setText(event.description)
+        dateInput.setText(event.date)
+        timeInput.setText(event.time)
         xInput.setText(event.x.toString())
         yInput.setText(event.y.toString())
     }
@@ -70,6 +76,8 @@ class AddEditActivity : AppCompatActivity() {
     private fun saveEvent() {
         val title = titleInput.text.toString().trim()
         val description = descriptionInput.text.toString().trim()
+        val date = dateInput.text.toString().trim()
+        val time = timeInput.text.toString().trim()
 
         if (title.isEmpty()) {
             titleInput.error = "Name is required"
@@ -92,6 +100,8 @@ class AddEditActivity : AppCompatActivity() {
             val event = EventModel(
                 title = title,
                 description = description,
+                date = date,
+                time = time,
                 x = x,
                 y = y
             )
@@ -107,6 +117,8 @@ class AddEditActivity : AppCompatActivity() {
                 id = editingId!!,
                 title = title,
                 description = description,
+                date = date,
+                time = time,
                 x = x,
                 y = y
             )

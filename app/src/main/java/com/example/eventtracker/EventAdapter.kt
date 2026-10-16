@@ -36,7 +36,8 @@ class EventAdapter (
 
         holder.titleText.text = "${event.id}: ${event.title}"
         holder.descriptionText.text = event.description
-        holder.coordinatesText.text = "X: ${event.x}, Y: ${event.y}"
+
+        holder.coordinatesText.text = "When: ${event.date} at ${event.time} | Venue: X: ${event.x}, Y: ${event.y}"
 
         holder.editButton.setOnClickListener {
             onEdit(event)
