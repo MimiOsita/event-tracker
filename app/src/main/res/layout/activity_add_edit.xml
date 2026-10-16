@@ -35,6 +35,21 @@
                     android:minLines="3" />
 
                 <EditText
+                    android:id="@+id/dateInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Event Date (e.g., Nov 24)"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/timeInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Event Time (e.g., 19:30)"
+                    android:inputType="text" />
+
+
+                <EditText
                     android:id="@+id/xInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

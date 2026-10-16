@@ -21,6 +21,8 @@ class EventMemStore {
         return if (foundEvent != null) {
             foundEvent.title = event.title
             foundEvent.description = event.description
+            foundEvent.date = event.date
+            foundEvent.time = event.time
             foundEvent.x = event.x
             foundEvent.y = event.y
 
